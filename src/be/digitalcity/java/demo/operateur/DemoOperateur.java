@@ -6,7 +6,6 @@ public class DemoOperateur {
 
     public static void main(String[] args) {
 
-
         // Opérateur arithmétique
         int a = 10, b = 3;
         double rslt;
