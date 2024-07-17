@@ -1,4 +1,4 @@
-package be.digitalcity.demo.java;
+package be.digitalcity.java;
 
 public class Main {
 

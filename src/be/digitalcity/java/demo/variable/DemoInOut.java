@@ -1,4 +1,4 @@
-package be.digitalcity.demo.java.variable;
+package be.digitalcity.java.demo.variable;
 
 import java.util.Scanner;
 
