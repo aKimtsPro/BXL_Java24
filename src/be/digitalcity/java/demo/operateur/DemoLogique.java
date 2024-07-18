@@ -61,12 +61,13 @@ public class DemoLogique {
 
         int temp = 18;
         boolean allumer = temp >= 5 && temp <= 15;
+//        boolean fermer = !(temp >= 5 && temp <= 15);
+//        boolean fermer = !(temp >= 5) || !(temp <= 15);
         boolean fermer = temp < 5 || temp > 15;
 
 
-
         // opérateur ternaire
-
+        // <condition> ? <valeur si vrai> : <valeur si faux>
         int age = 31;
         String majorite = age >= 18 ? "majeur" : "mineur";
 
