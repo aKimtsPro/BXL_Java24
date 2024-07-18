@@ -1,8 +1,6 @@
 package be.digitalcity.java.demo.operateur;
 
-import java.math.BigDecimal;
-
-public class DemoOperateur {
+public class DemoArithmetique {
 
     public static void main(String[] args) {
 
@@ -47,6 +45,20 @@ public class DemoOperateur {
         System.out.println( variable = 5 ); // 5
         System.out.println( variable += 5 ); // 10
         System.out.println( variable = variable++ ); // 10
+
+
+        // Inversion de variable sans var supplémentaire
+        int c = 5, d = 10;
+
+        c = c * d; // 50
+        d = c / d; // 5
+        c = c / d; // 10
+
+        c = c + d; // 15
+        d = c - d; // 5
+        c = c - d; // 10
+
+
     }
 
 }
