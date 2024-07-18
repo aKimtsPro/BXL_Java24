@@ -31,7 +31,6 @@ public class DemoComparaison {
 
 //        rslt = sc1 > sc3; // impossible, uniquement avec des nombres
 
-        //
         String str1 = "salut";
         String str2 = "salut";
         String str3 = new String("salut");
