@@ -12,9 +12,11 @@ public class DemoTableau {
         tab = new int[]{ 1, 2, 3, 4, 5 };
         int[] tab2 = { 1, 2, 3, 4, 5 };
 
+        System.out.print("[ ");
         for (int i = 0; i < tab.length ; i++) {
             System.out.print( tab[i]+ ", " );
         }
+        System.out.print(" ]");
 
         Arrays.toString(tab);
 
