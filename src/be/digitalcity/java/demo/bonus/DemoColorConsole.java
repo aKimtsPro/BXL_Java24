@@ -13,8 +13,12 @@ public class DemoColorConsole {
         final String ANSI_CYAN = "\u001B[36m";
         final String ANSI_WHITE = "\u001B[37m";
 
+        // Couleur dans la console
         System.out.println(ANSI_RED + "salut");
         System.out.println(ANSI_RESET + "salut");
         System.out.println(ANSI_GREEN + "salut");
+
+        // utilisation d'unicode
+        System.out.println('\u8742');
     }
 }
