@@ -31,9 +31,7 @@ public class ExoBoucles2 {
 
             candidat++;
         }
-
         long end = System.currentTimeMillis(); // 4s
-
 
         System.out.printf("Execution time: %dms\n", end-start);
 
