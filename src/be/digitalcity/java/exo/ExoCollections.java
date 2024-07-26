@@ -15,9 +15,8 @@ public class ExoCollections {
         boolean quit = false;
         while( !quit ){
             System.out.print("Nombre ou (q)uitter > ");
-            boolean isInt = sc.hasNextInt();
 
-            if( isInt ){
+            if( sc.hasNextInt() ){
                 int value = sc.nextInt();
                 if( value < 0 || value > 20 )
                     System.out.println("note invalide");
