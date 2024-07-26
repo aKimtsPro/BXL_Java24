@@ -40,9 +40,7 @@ public class DemoList {
 
         System.out.println( "taille: %d".formatted(prenoms.size()) );
 
-
         LinkedList<String> listeChainee = new LinkedList<>();
-
     }
 
 }
