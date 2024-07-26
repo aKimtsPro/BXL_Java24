@@ -59,11 +59,6 @@ public class ExoTable {
             System.out.printf("%s -> %s\n", key, value);
         }
 
-
-
-
-
-
     }
 
 }
