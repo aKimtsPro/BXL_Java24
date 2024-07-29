@@ -1,11 +1,24 @@
 package be.digitalcity.java.exo.oo;
 
 import java.time.LocalDate;
+import java.util.Random;
 
 public class Main {
 
     public static void main(String[] args) {
 
+        Bibliotheque b = new Bibliotheque("Ma Bibli");
+        Livre l = new Livre("blabla","blabla",LocalDate.now());
+        l = new Livre("toto", "toto");
+
+        b.ajouter(l);
+//        b.retirer( b.chercherParTitre("blabla") );
+        b.retirerParNom("blabla");
+
+    }
+
+
+    public static void correctionPersonne(){
         Personne p1 = new Personne();
         p1.prenom = "Luc";
         p1.nom = "Dubois";
@@ -17,7 +30,6 @@ public class Main {
 
         p1.saluer(p2);
         p2.saluer(p1);
-
     }
 
 }
