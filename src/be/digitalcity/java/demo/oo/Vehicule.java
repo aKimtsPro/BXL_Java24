@@ -11,7 +11,6 @@ public class Vehicule {
     }
 
     protected void seDeplacer(int kmParcouru){
-        System.out.println( this.marque );
         this.kmParcouru += kmParcouru;
     }
 

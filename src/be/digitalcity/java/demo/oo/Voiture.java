@@ -22,4 +22,10 @@ public class Voiture extends Vehicule {
         this.nbrPortes = nbrPortes;
     }
 
+    @Override
+    public void seDeplacer(int kmParcouru){
+        System.out.println("Vroom");
+        super.seDeplacer(kmParcouru);
+    }
+
 }
