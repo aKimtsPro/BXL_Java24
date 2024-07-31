@@ -5,15 +5,16 @@ import java.util.List;
 
 public class Bibliotheque {
 
-    String nom;
-    List<Livre> livres = new ArrayList<>();
+    private String nom;
+    private final List<Livre> livres = new ArrayList<>();
 
     Bibliotheque(String nom) {
         this.nom = nom;
     }
 
     void ajouter(Livre livre ){
-        livres.add(livre);
+        if( livre != null )
+            livres.add(livre);
     }
 
     Livre chercherParTitre(String titre){
@@ -32,5 +33,17 @@ public class Bibliotheque {
         Livre livre = this.chercherParTitre( titre );
         if( livre != null )
             this.retirer(livre);
+    }
+
+    public List<Livre> getLivres() {
+        return List.copyOf(livres);
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
     }
 }

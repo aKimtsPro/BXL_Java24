@@ -4,6 +4,9 @@ import be.digitalcity.java.demo.oo.Voiture;
 
 public class Berline extends Voiture {
 
+    public Berline() {
+        super("",0);
+    }
 
     void test() {
 //        this.marque = ""; // impossible

@@ -33,5 +33,4 @@ public class Personne {
     public LocalDate getDateNaiss() {
         return dateNaiss;
     }
-
 }

@@ -1,38 +1,25 @@
 package be.digitalcity.java.demo.oo;
 
-public class Voiture {
 
-    private String marque = "Mark";
-    private String modele;
-    private int kmParcouru;
+public class Voiture extends Vehicule {
 
-    protected void seDeplacer(int kmParcouru){
-        System.out.println( this.marque );
-        this.kmParcouru += kmParcouru;
+    private int nbrPortes;
+
+    protected Voiture(String marque, int nbrPortes){
+        this(marque, marque, nbrPortes);
     }
 
-    private void setKmParcouru(int kmParcouru){
-        if( kmParcouru > 0 )
-            this.kmParcouru = kmParcouru;
+    public Voiture(String marque, String modele, int nbrPortes){
+        super(marque, modele);
+        this.nbrPortes = nbrPortes;
     }
 
-    public int getKmParcouru(){
-        return this.kmParcouru;
+    public int getNbrPortes() {
+        return nbrPortes;
     }
 
-    public String getMarque() {
-        return marque;
+    public void setNbrPortes(int nbrPortes) {
+        this.nbrPortes = nbrPortes;
     }
 
-    public void setMarque(String marque) {
-        this.marque = marque;
-    }
-
-    public String getModele() {
-        return modele;
-    }
-
-    public void setModele(String modele) {
-        this.modele = modele;
-    }
 }

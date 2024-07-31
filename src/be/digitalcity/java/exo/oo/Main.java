@@ -15,6 +15,9 @@ public class Main {
 //        b.retirer( b.chercherParTitre("blabla") );
         b.retirerParNom("blabla");
 
+
+        b.getLivres().add(null);
+
     }
 
 
