@@ -8,6 +8,12 @@ public class Personne {
     String nom;
     final LocalDate dateNaiss;
 
+//    public Personne(String prenom, String nom) {
+//        this.prenom = prenom;
+//        this.nom = nom;
+//        this.dateNaiss = LocalDate.now();
+//    }
+
     public Personne(LocalDate dateNaiss, String nom, String prenom) {
         this.dateNaiss = dateNaiss;
         this.nom = nom;

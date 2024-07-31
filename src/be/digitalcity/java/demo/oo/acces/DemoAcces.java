@@ -8,7 +8,7 @@ public class DemoAcces {
 
         Voiture v = new Voiture();
 
-        v.marque = "";
+//        v.marque = ""; impossible
 
     }
 

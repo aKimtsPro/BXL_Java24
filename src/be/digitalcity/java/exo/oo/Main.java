@@ -19,14 +19,8 @@ public class Main {
 
 
     public static void correctionPersonne(){
-        Personne p1 = new Personne();
-        p1.prenom = "Luc";
-        p1.nom = "Dubois";
-        p1.dateNaiss = LocalDate.of(2000,1,1);
-
-        Personne p2 = new Personne();
-        p2.prenom = "Marie";
-        p2.nom = "Debois";
+        Personne p1 = new Personne(LocalDate.of(2000,1,1), "Dubois", "Luc");
+        Personne p2 = new Personne( LocalDate.now(),"Debois","Marie");
 
         p1.saluer(p2);
         p2.saluer(p1);

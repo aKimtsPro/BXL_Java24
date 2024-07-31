@@ -6,7 +6,7 @@ public class Berline extends Voiture {
 
 
     void test() {
-        this.marque = "";
+//        this.marque = ""; // impossible
         this.seDeplacer(14);
     }
 
