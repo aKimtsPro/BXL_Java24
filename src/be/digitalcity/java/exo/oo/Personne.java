@@ -6,9 +6,16 @@ public class Personne {
 
     String prenom;
     String nom;
-    LocalDate dateNaiss;
+    final LocalDate dateNaiss;
 
-    void saluer( Personne aSaluer ){
+    public Personne(LocalDate dateNaiss, String nom, String prenom) {
+        this.dateNaiss = dateNaiss;
+        this.nom = nom;
+        this.prenom = prenom;
+    }
+
+
+    void saluer(Personne aSaluer ){
 
         System.out.printf(
                 "Bonjour %s, je m'appelle %s\n",

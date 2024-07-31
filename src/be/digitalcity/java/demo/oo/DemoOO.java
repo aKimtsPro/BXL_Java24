@@ -1,4 +1,4 @@
-package be.digitalcity.java.oo;
+package be.digitalcity.java.demo.oo;
 
 public class DemoOO {
 
