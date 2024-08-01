@@ -9,9 +9,21 @@ public class DemoOO {
     public static void main(String[] args) {
 
 //        Vehicule vehicule = new Vehicule("", "");
-        Vehicule vehicule = new Voiture("", "", 3);
+        Vehicule v1 = new Voiture("", "", 3);
+        Vehicule b1 = new Bateau("", "");
+        Vehicule va1 = new VoitureAmphibie("", "");
 
-        vehicule.seGarer();
+        List<Vehicule> vehicules = new ArrayList<>();
+
+        vehicules.add( v1 );
+        vehicules.add( b1 );
+
+        for (Vehicule vehicule : vehicules) {
+            if( vehicule instanceof Roulant roulant)
+                roulant.rouler(10);
+            else if ( vehicule instanceof Navigable navigable )
+                navigable.naviger(10);
+        }
 
     }
 

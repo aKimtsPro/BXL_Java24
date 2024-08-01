@@ -1,6 +1,6 @@
 package be.digitalcity.java.demo.oo;
 
-public class Bateau extends Vehicule {
+public class Bateau extends Vehicule implements Navigable  {
 
     private int nbrVoiles;
 
@@ -20,4 +20,11 @@ public class Bateau extends Vehicule {
     public void seGarer() {
         System.out.println("Je prend une place au port");
     }
+
+    @Override
+    public void naviger(int distance) {
+        System.out.println("plouf");
+        seDeplacer(distance);
+    }
+
 }

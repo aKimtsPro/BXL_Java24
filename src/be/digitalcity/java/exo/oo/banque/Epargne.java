@@ -32,6 +32,11 @@ public class Epargne extends Compte {
     }
 
     @Override
+    protected double calculInteret() {
+        return this.getSolde() * 0.045;
+    }
+
+    @Override
     public boolean equals(Object object) {
 
         if (this == object) return true;

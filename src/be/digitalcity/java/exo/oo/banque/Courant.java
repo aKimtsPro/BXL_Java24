@@ -29,6 +29,11 @@ public class Courant extends Compte {
             super.retrait(montant);
     }
 
+    @Override
+    protected double calculInteret() {
+        return (getSolde() > 0 ? 0.03 : 0.0975) * getSolde();
+    }
+
     // endregion
 
 }

@@ -26,6 +26,21 @@ public class Main {
                     epargne.getDateDernierRetrait()
             );
         }
+        System.out.println("solde avant interet : " + compte.getSolde());
+        compte.appliquerInteret();
+        System.out.println("solde après interet : " + compte.getSolde());
+
+
+        System.out.println("solde avant interet : " + c.getSolde());
+        c.appliquerInteret();
+        System.out.println("solde après interet : " + c.getSolde());
+
+        c.depot(209.75);
+
+        System.out.println("solde avant interet : " + c.getSolde());
+        c.appliquerInteret();
+        System.out.println("solde après interet : " + c.getSolde());
+
 
     }
 }

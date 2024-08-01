@@ -4,7 +4,7 @@ package be.digitalcity.java.demo.oo;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Voiture extends Vehicule {
+public class Voiture extends Vehicule implements Roulant {
 
     private int nbrPortes;
 
@@ -16,6 +16,7 @@ public class Voiture extends Vehicule {
         super(marque, modele);
         this.nbrPortes = nbrPortes;
     }
+
 
     public int getNbrPortes() {
         return nbrPortes;
@@ -40,5 +41,11 @@ public class Voiture extends Vehicule {
     @Override
     public void seGarer() {
         System.out.println("Je prend une place de parking");
+    }
+
+    @Override
+    public void rouler(int distance) {
+        System.out.println("vroom");
+        seDeplacer(distance);
     }
 }

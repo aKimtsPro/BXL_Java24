@@ -8,11 +8,5 @@ public class Berline extends Voiture {
         super("",0);
     }
 
-    void test() {
-//        this.marque = ""; // impossible
-        this.seDeplacer(14);
-    }
-
-
 
 }
