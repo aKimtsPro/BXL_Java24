@@ -1,28 +1,14 @@
 package be.digitalcity.java.exo.oo.banque;
 
-public class Courant {
+public class Courant extends Compte {
 
-    private final String numero;
-    private double solde;
     private double ligneDeCredit;
-    private Personne titulaire;
 
     public Courant(String numero, Personne titulaire) {
-        this.numero = numero;
-        this.setTitulaire(titulaire);
+        super(numero, titulaire);
     }
 
-    public String getNumero() {
-        return numero;
-    }
-
-    public double getSolde(){
-        return solde;
-    }
-
-    private void setSolde(double solde){
-        this.solde = solde;
-    }
+    // region GET/SET
 
     public double getLigneDeCredit(){
         return ligneDeCredit;
@@ -33,27 +19,16 @@ public class Courant {
             this.ligneDeCredit = ligneDeCredit;
     }
 
-    public Personne getTitulaire() {
-        return titulaire;
-    }
+    // endregion
 
-    public void setTitulaire(Personne titulaire) {
-        if( titulaire != null )
-            this.titulaire = titulaire;
-        else
-            throw new RuntimeException();
-    }
+    // region METHODS
 
+    @Override
     public void retrait(double montant){
-        if(montant > 0 && montant <= solde + ligneDeCredit){
-           solde -= montant;
-        }
+        if( montant <= getSolde() + ligneDeCredit )
+            super.retrait(montant);
     }
 
-    public void depot(double montant){
-        if( montant > 0 ){
-            solde += montant;
-        }
-    }
+    // endregion
 
 }

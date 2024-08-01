@@ -2,7 +2,7 @@ package be.digitalcity.java.exo.oo.banque;
 
 import java.time.LocalDateTime;
 
-public class Compte {
+public class Compte extends Object {
     private final String numero;
     private double solde;
     private Personne titulaire;
@@ -41,9 +41,8 @@ public class Compte {
     // region METHODS
 
     public void retrait(double montant){
-        if( montant > 0 ){
+        if( montant > 0 )
             solde -= montant;
-        }
     }
 
 

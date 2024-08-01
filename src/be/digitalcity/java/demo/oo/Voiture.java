@@ -1,6 +1,9 @@
 package be.digitalcity.java.demo.oo;
 
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class Voiture extends Vehicule {
 
     private int nbrPortes;
@@ -28,4 +31,14 @@ public class Voiture extends Vehicule {
         super.seDeplacer(kmParcouru);
     }
 
+    @Override
+    public boolean equals(Object object) {
+        return super.equals(object) &&
+            this.nbrPortes == ((Voiture) object).nbrPortes;
+    }
+
+    @Override
+    public void seGarer() {
+        System.out.println("Je prend une place de parking");
+    }
 }

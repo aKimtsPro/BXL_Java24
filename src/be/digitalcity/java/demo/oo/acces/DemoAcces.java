@@ -6,7 +6,7 @@ public class DemoAcces {
 
     public static void main(String[] args) {
 
-        Voiture v = new Voiture();
+//        Voiture v = new Voiture();
 
 //        v.marque = ""; impossible
 

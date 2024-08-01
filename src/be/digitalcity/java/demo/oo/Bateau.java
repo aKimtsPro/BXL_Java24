@@ -16,4 +16,8 @@ public class Bateau extends Vehicule {
         this.nbrVoiles = nbrVoiles;
     }
 
+    @Override
+    public void seGarer() {
+        System.out.println("Je prend une place au port");
+    }
 }

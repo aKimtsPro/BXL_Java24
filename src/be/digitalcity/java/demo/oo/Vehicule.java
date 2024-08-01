@@ -1,6 +1,6 @@
 package be.digitalcity.java.demo.oo;
 
-public class Vehicule {
+public abstract class Vehicule {
     private String marque;
     private String modele;
     private int kmParcouru;
@@ -13,6 +13,8 @@ public class Vehicule {
     protected void seDeplacer(int kmParcouru){
         this.kmParcouru += kmParcouru;
     }
+
+    public abstract void seGarer();
 
     public int getKmParcouru() {
         return kmParcouru;
@@ -37,5 +39,33 @@ public class Vehicule {
 
     public void setModele(String modele) {
         this.modele = modele;
+    }
+
+    @Override
+    public String toString() {
+        return "%s { marque: %s, modele: %s, kmParcouru: %d }".formatted(
+                this.getClass().getSimpleName(),
+                this.marque,
+                this.modele,
+                this.kmParcouru
+        );
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        if (this == object) return true;
+        if (object == null || getClass() != object.getClass()) return false;
+
+        Vehicule vehicule = (Vehicule) object;
+        return marque.equals(vehicule.marque) &&
+                modele.equals(vehicule.modele);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = marque.hashCode();
+        result = 31 * result + modele.hashCode();
+        result = 31 * result + kmParcouru;
+        return result;
     }
 }
