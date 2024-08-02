@@ -2,11 +2,11 @@ package be.digitalcity.java.exo.oo.competition;
 
 import java.time.LocalDate;
 
-public class Personne {
+public abstract class Personne {
 
-    String prenom;
-    String nom;
-    LocalDate dateNaiss;
+    private String prenom;
+    private String nom;
+    private LocalDate dateNaiss;
 
     Personne(String prenom, String nom, LocalDate dateNaiss) {
         this.prenom = prenom;
@@ -31,4 +31,27 @@ public class Personne {
         return this.prenom + " " + this.nom;
     }
 
+    public String getPrenom() {
+        return prenom;
+    }
+
+    public void setPrenom(String prenom) {
+        this.prenom = prenom;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public LocalDate getDateNaiss() {
+        return dateNaiss;
+    }
+
+    public void setDateNaiss(LocalDate dateNaiss) {
+        this.dateNaiss = dateNaiss;
+    }
 }

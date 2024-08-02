@@ -3,24 +3,69 @@ package be.digitalcity.java.exo.oo.competition;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Competition {
+public class Competition<C extends Competiteur> {
 
-    final int minParticipant;
-    final int maxParticipant;
-    boolean started;
-    final Set<Personne> participants = new HashSet<>();
+    public static final int DEFAULT_MIN_PARTICIPANT = 3;
+    public static final int DEFAULT_MAX_PARTICIPANT = 12;
 
-    Competition(int minParticipant, int maxParticipant){
+    private final int minParticipant;
+    private final int maxParticipant;
+    private boolean started;
+    private final Set<C> participants = new HashSet<>();
+
+    public Competition(int minParticipant, int maxParticipant){
         this.maxParticipant = maxParticipant;
         this.minParticipant = minParticipant;
     }
 
-    Competition(){
-        this(3, 12);
+    public Competition(){
+        this(DEFAULT_MIN_PARTICIPANT, DEFAULT_MAX_PARTICIPANT);
     }
 
-    Competition(int maxParticipant){
-        this(3, maxParticipant);
+    public Competition(int maxParticipant){
+        this(DEFAULT_MIN_PARTICIPANT, maxParticipant);
     }
 
+    public void signUp(C toSignUp ){
+        if( participants.size() < maxParticipant && !started  ){
+            participants.add( toSignUp );
+        }
+    }
+
+    public void signUp( C ...signUps ){
+        for (C toSignUp : signUps) {
+            signUp(toSignUp);
+        }
+    }
+
+    public void remove( C toRemove ){
+        if( toRemove != null && !started ){
+            participants.remove(toRemove);
+        }
+    }
+
+    public void start(){
+        if( !started )
+            started = true;
+    }
+
+    public int getMinParticipant() {
+        return minParticipant;
+    }
+
+    public int getMaxParticipant() {
+        return maxParticipant;
+    }
+
+    public boolean isStarted() {
+        return started;
+    }
+
+    private void setStarted(boolean started) {
+        this.started = started;
+    }
+
+    public Set<C> getParticipants() {
+        return Set.copyOf(participants);
+    }
 }
