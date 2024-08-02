@@ -41,6 +41,9 @@ public class Main {
         c.appliquerInteret();
         System.out.println("solde après interet : " + c.getSolde());
 
+        Banker banker = c;
+        Customer customer = c;
+
 
     }
 }

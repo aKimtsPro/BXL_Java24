@@ -2,6 +2,8 @@ package be.digitalcity.java.demo.oo;
 
 public interface Roulant {
 
-    void rouler(int distance);
+    default void rouler(int distance) {
+        System.out.println("ca roule");
+    }
 
 }

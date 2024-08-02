@@ -10,8 +10,13 @@ public abstract class Vehicule {
         this.modele = modele;
     }
 
+
     protected void seDeplacer(int kmParcouru){
         this.kmParcouru += kmParcouru;
+    }
+
+    protected void seDeplacer(){
+        this.kmParcouru += 10;
     }
 
     public abstract void seGarer();

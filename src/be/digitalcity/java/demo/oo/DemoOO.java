@@ -3,6 +3,7 @@ package be.digitalcity.java.demo.oo;
 import be.digitalcity.java.demo.oo.acces.Berline;
 
 import java.util.*;
+import java.util.function.Predicate;
 
 public class DemoOO {
 
@@ -14,16 +15,44 @@ public class DemoOO {
         Vehicule va1 = new VoitureAmphibie("", "");
 
         List<Vehicule> vehicules = new ArrayList<>();
+        List<Voiture> voitures = new ArrayList<>();
+        List<Object> objects = new ArrayList<>();
+
+        Vehicule vehicule = getFirstVehicule(vehicules);
+        Voiture voiture = getFirstVehicule(voitures);
+        Bateau bateau = (Bateau) b1;
+
+        Garage<Voiture> garage = new Garage<>();
+
+        garage.parker( voiture );
+        Voiture voiture1 = garage.quitterGarage();
+
+        Garage<Bateau> port = new Garage<>();
+
+        port.parker(bateau);
+        Bateau bateau1 = port.quitterGarage();
+
+
+
+//        Object o1 = getFirstVehicule(objects); // impossible : contrainte pas respectée sur T
+
+        Amphibie amphibie = (Amphibie) va1;
 
         vehicules.add( v1 );
         vehicules.add( b1 );
 
-        for (Vehicule vehicule : vehicules) {
-            if( vehicule instanceof Roulant roulant)
+        for (Vehicule veh : vehicules) {
+            if( veh instanceof Roulant roulant)
                 roulant.rouler(10);
-            else if ( vehicule instanceof Navigable navigable )
+            else if ( veh instanceof Navigable navigable )
                 navigable.naviger(10);
         }
+
+        Personne personne = new Personne("","");
+        Personne personne2 = new Personne("","");
+
+        personne.saluer(personne2, "salut");
+        personne.saluer("salut", personne2);
 
     }
 
@@ -33,7 +62,6 @@ public class DemoOO {
 
 //        voit1.marque = voit1.marque + "2";
         voit1.setMarque( voit1.getMarque() + "2" );
-
 
         voit1.seDeplacer(15);
 
@@ -94,5 +122,26 @@ public class DemoOO {
 
         Object o =v1;
     }
+
+    public static <T extends Vehicule> T getFirstVehicule(List<T> liste){
+        return liste.size() > 0 ? liste.getFirst() : null;
+    }
+
+    public static <T> void addObjectToList(List<? super T> list, T toAdd){
+        list.add(toAdd);
+    }
+
+
+//    public static Vehicule getFirstVehicule(List<Vehicule> liste){
+//        return liste.size() > 0 ? liste.getFirst() : null;
+//    }
+////
+//    public static Voiture getFirstVehicule(List<Voiture> liste){
+//        return liste.size() > 0 ? liste.getFirst() : null;
+//    }
+//
+//    public static Bateau getFirstVehicule(List<Bateau> liste){
+//        return liste.size() > 0 ? liste.getFirst() : null;
+//    }
 
 }

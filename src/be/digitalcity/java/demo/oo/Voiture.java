@@ -17,7 +17,6 @@ public class Voiture extends Vehicule implements Roulant {
         this.nbrPortes = nbrPortes;
     }
 
-
     public int getNbrPortes() {
         return nbrPortes;
     }
